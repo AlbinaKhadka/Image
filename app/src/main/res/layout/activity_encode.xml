@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fav"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Encode Image"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/image_box"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/title_layout"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/cover"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/plus_sign_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/plus"
+            android:scaleType="centerCrop" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/choose_image_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_box"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Choose an Image"
+        android:textColor="@color/white"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/message"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/choose_image_button"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/cover"
+        android:hint="Enter message"
+        android:inputType="textMultiLine"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/secret_key"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/message"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/cover"
+        android:hint="Enter secret key"
+        android:inputType="textPassword"
+        android:textSize="30sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secret_key"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <Space
+            android:layout_width="10dp"
+            android:layout_height="1dp" />
+        <Button
+            android:id="@+id/save_image_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save Image" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/whether_encoded"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold" />
+
+</RelativeLayout>
